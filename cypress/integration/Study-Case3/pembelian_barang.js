@@ -5,8 +5,8 @@ describe('test case pembelian barang', function(){
 
     it('tc-01', function(){
         //proses pembelian barang
-        cy.wait(2000)
-        
+        cy.wait(3000)
+                
         cy.get(':nth-child(6) > .card > .card-block > .card-title > .hrefch').should('have.text', 'Sony xperia z5').click()
         cy.wait(3000)
 
