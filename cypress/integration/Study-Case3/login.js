@@ -6,10 +6,8 @@ describe('test case login', function(){
     it('tc-login01', function(){        
         //proses login
         cy.get('#login2').should('have.id', 'login2').click()
-        cy.get('#loginusername').type('dojo-Luoyi')
-        cy.get('#loginusername').should('have.value', 'dojo-Luoyi')
-        cy.get('#loginpassword').type('dojo-luoyi')
-        cy.get('#loginpassword').should('have.value', 'dojo-luoyi')
+        cy.get('#loginusername').type('dojo-Luoyi', {force:true}).should('have.value', 'dojo-Luoyi')
+        cy.get('#loginpassword').type('dojo-luoyi').should('have.value', 'dojo-luoyi')
         cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').should('have.class', 'btn btn-primary').click()
     })
 
